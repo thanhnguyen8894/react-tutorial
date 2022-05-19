@@ -1,36 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-import TodoItem from './components/TodoItem';
+// import logo from './logo.svg';
+import { Component } from "react";
+import "./App.css";
+import TodoItem from "./components/TodoItem";
 
+// class App extends Component {
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+  
 
-          i love you
-        </p>
-        <ul>
-        <li><TodoItem title="ahihihihihihih"/></li>
-        <li><TodoItem title="ABC"/></li>
-        <li><TodoItem title="1234"/></li>
-        </ul>
+  // constructor() {
+  //   super();
+    this.todoItems = [
+      {title: "Nhậu"},
+      {title: "Nhậu nữa"},
+      {title: "Nhậu mãi"}
+    ];
+  // }
 
-        <TodoItem options="123" />
-        
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  // render() {
+    return (
+      <div className="App">
+        <h2>To do lít</h2>
+
+        {this.todoItems.map((item, index) => (
+          <TodoItem key={index} title={item.title} />
+        ))}
+
+        {/* <TodoItem title="Nhậu" />
+      <TodoItem title="Nhậu nữa" />
+      <TodoItem title="Nhậu mãi" /> */}
+      </div>
+    );
+  }
+// }
 
 export default App;
