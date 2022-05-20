@@ -1,0 +1,11 @@
+.TodoItem {
+    font-weight: 300;
+    font-size: 20px;
+    color: darksalmon;
+}
+
+.TodoItem-done{
+    text-decoration: line-through ;
+    opacity: 0.3 ;
+    font-size: 20px;
+}

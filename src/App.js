@@ -1,36 +1,31 @@
 // import logo from './logo.svg';
 import { Component } from "react";
 import "./App.css";
-import TodoItem from "./components/TodoItem";
+import TodoItem from "./components/todoItem/TodoItem";
 
-// class App extends Component {
-function App() {
-  
-
-  // constructor() {
-  //   super();
+class App extends Component {
+  constructor() {
+    super();
     this.todoItems = [
-      {title: "Nhậu"},
-      {title: "Nhậu nữa"},
-      {title: "Nhậu mãi"}
+      // { title: "Nhậu", isDone: true },
+      // { title: "Nhậu nữa" },
+      // { title: "Nhậu mãi" },
     ];
-  // }
-
-  // render() {
+  }
+  render() {
     return (
       <div className="App">
-        <h2>To do lít</h2>
+        <h2>To do list</h2>
 
-        {this.todoItems.map((item, index) => (
-          <TodoItem key={index} title={item.title} />
-        ))}
+        {this.todoItems.length > 0 &&
+          this.todoItems.map((item, index) => (
+            <TodoItem key={index} item={item} />
+          ))}
 
-        {/* <TodoItem title="Nhậu" />
-      <TodoItem title="Nhậu nữa" />
-      <TodoItem title="Nhậu mãi" /> */}
+        {this.todoItems.length === 0 && "Éo có gì làm"}
       </div>
     );
   }
-// }
+}
 
 export default App;
