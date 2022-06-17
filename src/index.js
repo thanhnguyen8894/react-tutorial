@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './render files/App';
 import reportWebVitals from './reportWebVitals';
-import State from './State'
+import State from './render files/State'
 // import TrafficLight from './components/trafficLight/TrafficLight';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <State />
+    <App />
+    {/* <State /> */}
     {/* <TrafficLight/> */}
+    
+
   </React.StrictMode>
 );
 

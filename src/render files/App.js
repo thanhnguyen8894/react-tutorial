@@ -1,15 +1,15 @@
 // import logo from './logo.svg';
 import { Component } from "react";
-import "./App.css";
-import TodoItem from "./components/todoItem/TodoItem";
+import "../";
+import TodoItem from "../components/todoItem/TodoItem";
 
 class App extends Component {
   constructor() {
     super();
     this.todoItems = [
-      // { title: "Nhậu", isDone: true },
-      // { title: "Nhậu nữa" },
-      // { title: "Nhậu mãi" },
+      { title: "Nhậu", isDone: true },
+      { title: "Nhậu nữa", isDone: false },
+      { title: "Nhậu mãi", isDone: true },
     ];
   }
   render() {
